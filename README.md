@@ -30,7 +30,7 @@ Using the GPDK 45nm PDK, the following technology-specific plots were generated 
 
 #### NMOS Plots
 1. **\( g_m * r_o \) vs. \( g_m / I_D \)** 
- 
+
 ![gmro_nmos](images/ngmro.tif)  
 
 2. **\( I_D / W \) vs. \( g_m / I_D \)**  
@@ -55,10 +55,10 @@ Using the GPDK 45nm PDK, the following technology-specific plots were generated 
 
 ### Cadence Screenshots
 - **NMOS Simulation in Cadence**  
-![cadence_nmos](images/cadence_nmos.png)  
+![cadence_nmos](images/nmos_cadence.png)  
 
 - **PMOS Simulation in Cadence**  
-![cadence_pmos](images/cadence_pmos.png)  
+![cadence_pmos](images/pmos_cadence.png)  
 
 
 
