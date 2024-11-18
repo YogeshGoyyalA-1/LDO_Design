@@ -28,7 +28,7 @@ The primary goal of this project is to design an LDO using the GPDK 45nm Process
 
 Using the GPDK 45nm PDK, the following technology-specific plots were generated to evaluate transistor performance.  
 
-## NMOS Circuit in Cadence**  
+## **NMOS Circuit in Cadence**  
 ![nmos_circuit](images/nmos_circuit.png)
 
 #### NMOS Plots
@@ -44,7 +44,7 @@ Using the GPDK 45nm PDK, the following technology-specific plots were generated 
 
 ![ft_nmos](images/nft.tif)  
 ---
-## PMOS Circuit in Cadence**  
+## **PMOS Circuit in Cadence**  
 ![pmos_circuit](images/pmos_circuit.png)
 
 #### PMOS Plots
