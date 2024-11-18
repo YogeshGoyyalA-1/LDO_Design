@@ -28,26 +28,36 @@ The primary goal of this project is to design an LDO using the GPDK 45nm Process
 
 Using the GPDK 45nm PDK, the following technology-specific plots were generated to evaluate transistor performance.  
 
-#### Plots for NMOS
-1. **\( g_m \cdot r_o \) vs. \( g_m / I_D \)**  
+#### NMOS Plots
+1. **\( g_m * r_o \) vs. \( g_m / I_D \)**  
+![gmro_nmos](images/ngmro.tif)  
+
 2. **\( I_D / W \) vs. \( g_m / I_D \)**  
-3. **\( f_t \) vs. \( g_m / I_D \)**  
+![idw_nmos](images/nidw.tif)  
 
-#### Plots for PMOS
-1. **\( g_m \cdot r_o \) vs. \( g_m / I_D \)**  
+3. **\( f_t \) vs. \( g_m / I_D \)**  
+![ft_nmos](images/nft.tif)  
+
+#### PMOS Plots
+1. **\( g_m * r_o \) vs. \( g_m / I_D \)**  
+![gmro_pmos](images/pgmro.tif)  
+
 2. **\( I_D / W \) vs. \( g_m / I_D \)**  
+![idw_pmos](images/pidw.tif)  
+
 3. **\( f_t \) vs. \( g_m / I_D \)**  
+![ft_pmos](images/pft.tif)  
 
-### Insert Images Here
-- **NMOS**: \( g_m \cdot r_o \), \( I_D / W \), \( f_t \) plots.  
-- **PMOS**: \( g_m \cdot r_o \), \( I_D / W \), \( f_t \) plots.  
+---
 
-#### Example Images
-- **NMOS: gmro_nmos.png**  
-![gmro_nmos](techplots/gmro_nmos.png)
+### Cadence Screenshots
+- **NMOS Simulation in Cadence**  
+![cadence_nmos](images/cadence_nmos.png)  
 
-- **PMOS: gmro_pmos.png**  
-![gmro_pmos](techplots/gmro_pmos.png)
+- **PMOS Simulation in Cadence**  
+![cadence_pmos](images/cadence_pmos.png)  
+
+
 
 ### gm/id Methodology  
 
@@ -65,13 +75,12 @@ The gm/id methodology provides an efficient design framework for analog circuits
 
 ---
 
-## LDO Design Circuit  
+<!-- ## LDO Design Circuit  
 
 ### Schematic
 Include a well-labeled image of the LDO schematic designed in Cadence.  
 
 - **Cadence Schematic Screenshot**  
-![schematic_cadence](circuit_design/schematic_cadence.png)
 
 ### Key Design Considerations  
 
@@ -79,12 +88,12 @@ Include a well-labeled image of the LDO schematic designed in Cadence.
 - Power efficiency and output voltage stability under varying loads.  
 - Compensation to ensure frequency stability.  
 
----
+--- -->
 
-## Author  
+<!-- ## Author  
 
 **[Your Full Name]**  
 [Your Email Address]  
-[Your GitHub Profile Link]  
+[Your GitHub Profile Link]   -->
 
 Feel free to reach out for further queries or discussions on the project!  
