@@ -49,7 +49,7 @@ Using the GPDK 45nm PDK, the following technology-specific plots were generated 
 
 #### PMOS Plots
 1. **\( g_m * r_o \) vs. \( g_m / I_D \)**  
-![gmro_pmos](images/pgmro.png)  
+![gmro_pmos](images/pgmro.jpeg)  
 
 2. **\( I_D / W \) vs. \( g_m / I_D \)**  
 ![idw_pmos](images/pidw.png)  
