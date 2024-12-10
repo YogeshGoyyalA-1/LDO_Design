@@ -10,6 +10,6 @@ In this project we have designed an LDO subject to different conditions. For thi
 
 ## Contributors
 
-Vadlamudi Karthikeya
-Rohit Mogli
-Yogesh Goyyal
+1.Vadlamudi Karthikeya
+2.Rohit Mogli
+3.Yogesh Goyyal
