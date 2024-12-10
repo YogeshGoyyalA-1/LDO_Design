@@ -8,3 +8,8 @@ This repository contains the deliverables and documentation for the Analog CMOS 
 
 In this project we have designed an LDO subject to different conditions. For this design we are designing the LDO for both externally and internally compensated LDO. We have considered different technology nodes and for different legths for the same.Our aim is to design the LDO for a max and a min load condition and see where the outputs are more desireable.
 
+## Contributors
+
+Vadlamudi Karthikeya
+Rohit Mogli
+Yogesh Goyyal
