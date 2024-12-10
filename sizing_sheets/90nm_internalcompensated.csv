@@ -1,0 +1,81 @@
+Step 1: List Down the Specifications and classify them,,,,
+,,,,
+,,Value,,Notes
+,,,,
+Vin,,1.4,,
+Vout,,1,,
+PSRR,,60,,20*log(Vin/Vout) You can also have it as 20*log(Vout/Vin) and then report PSRR as negative
+Iload|min,,2,,
+Iload|max,,10,,
+Cload,,2,,
+Iquiescent,,50,,
+Transient duration,,1,,
+,,,,
+Step 2: Evaluate Interim Design Goals,,,,
+,,,,
+Low Freq Loop Gain (Alg),,1000,,
+Drop Out Voltage,,0.4,,Vin-Vout of the LDO
+?I (Load step),,0.008,,Imax-Imin
+,,,,
+wumin,,1000000,,1/tau or transient duration
+,,,,
+Step 3: Power FET Sizing,,,,
+,,,,
+Power FET,,,,
+,,Hand/Techplots Calculations,,
+gm/Id,,10,,Proxy for 200 mV Vov (You can change it later as long as you guarantee the transistor in saturation)
+Id/W,,41.3831,,From techplots of PMOS
+Id,,0.01,,Design for max load
+W,,0.000241645,,Id/(Id/W)
+Apass_heavy (gmro),,36.8,,From techplots
+ft,,2.98E+10,,From techplots
+Length,,0.09,,Minimum length to keep pass fet area low
+gm,,1.00E-01,,gm/Id  * Id
+ro,,3.68E+02,,gmro/gm
+Cgs+Cgd,,5.34E-13,,ft/gm/2pi
+LIGHT LOAD,,,,Worst Case Stability Condition
+Id,,2.00E-03,,Imin
+Id/W,,8.28E+00,,Imin/Width derived above
+gm/Id,,17,,From techplots
+gmro,,40.36,,From techplots
+Low-frequency loop gain light load,,1096.73913,,Apass scales by gmro_light/gmro_heavy. Same scaling factor for Loop Gain : So 1000*(65/33)
+gmlight,,3.40E-02,,gm/Id*Id
+,,,,
+Step 4: Revaluate Interim Design Parameters,,,,
+,,,,
+wp2heavy,,5.00E+07,,gmpass_heavy/CL
+wp2light,,1.70E+07,,gmpass_light/CL
+fp2light,,2.71E+06,,gmpass_light/CL/2pi
+Adiffamp_min,,27,,Alg/Apass_heavy
+Adiff_n_min,,54,,Adiffamp_min*2 : Diffamp gain is gmro/2 so gmro is 2*Adiffamp_min
+wp1,,1.55E+04,,Adiffamp_min
+fp1,,2.47E+03,,
+Step 5: Diffamp Input Pair Sizing (Heavy load error will be higher than light load because we used light load Charts),,,,
+,,Hand Calculation.,,
+gm/Iddiff,,10,,"Again, proxy for 200 mV"
+Id,,0.000025,,Ibias/2
+gmro,,54,,"From NMOS techplots: Choose higher, a little overdesigned"
+Length,,0.09,,From NMOS techplots
+Id/W,,89.96,,From NMOS techplots
+W,,0.277901289,,Id/(Id/W)
+gm,,0.00025,,gm/Id * Id
+ro,,216000,,gmro/gm
+,,,,
+Step 6: PMOS Load sizing (Vds assumed to be 0.4 for techplots - which can change),,,,
+Id,,0.000025,,Ibias/2
+gm/Iddiff,,10,,Match with the gm/Id of Pass FET for reduced Vds mismatch
+gmro,,54,,From PMOS Techplots
+Length,,0.09,,"If you don’t have exact Vds techplots, then choose the length accordingly. For us, we have techplots for Vds of 0.4 and Vds of Pload is Vt+Vov (>0.7V)"
+gm,,0.00025,,gm/Id*Id
+Id/W,,41.38,,From PMOS Techplots
+W,,6.04157E-07,,Id/(Id/W)
+ro,,216000,,gmro/gm
+,,,,
+,,,,
+,,,,
+Sizing CC,,,,
+rodiff,,108000,,rop||ron
+Cc+Cgd,,1.48E-11,,1/wp1/rodiff/Apass
+Cgg,,5.34E-13,,From gmpass fT
+Cgd,,1.76E-13,,For our technology Cgd is 0.33*Cgg in Saturation
+Cc,,1.46E-11,,(Cc+Cgd)-Cgd
