@@ -1,6 +1,6 @@
-# Analog CMOS Final Project: LDO Design in GPDK 45nm Technology Node
+# Analog CMOS Final Project: LDO Design in High Performance 45nm Technology Node
 
-This repository contains the deliverables and documentation for the Analog CMOS Final Project, where we design an LDO (Low Dropout Regulator) using the GPDK 45nm technology node. The project employs the gm/id methodology to generate technology-specific plots and design the LDO circuit.
+This repository contains the deliverables and documentation for the Analog CMOS Final Project, where we design an LDO (Low Dropout Regulator) using the HP 45nm technology node. The project employs the gm/id methodology to generate technology-specific plots and design the LDO circuit.
 
 ---
 
@@ -18,7 +18,7 @@ This repository contains the deliverables and documentation for the Analog CMOS 
 
 ## Project Overview
 
-The primary goal of this project is to design an LDO using the GPDK 45nm Process Design Kit (PDK). Key deliverables include generating technology-specific plots using Cadence and MATLAB, documenting the gm/id methodology, and designing the LDO tailored to the GPDK 45nm node.
+The primary goal of this project is to design an LDO using the HP 45nm Process Design Kit (PDK). Key deliverables include generating technology-specific plots using Cadence and MATLAB, documenting the gm/id methodology, and designing the LDO tailored to the GPDK 45nm node.
 
 ---
 
@@ -26,7 +26,7 @@ The primary goal of this project is to design an LDO using the GPDK 45nm Process
 
 ### Technology-Specific Plots
 
-Using the GPDK 45nm PDK, the following technology-specific plots were generated to evaluate transistor performance.  
+Using the HP 45nm PDK, the following technology-specific plots were generated to evaluate transistor performance.  
 
 ## **NMOS Circuit in Cadence**  
 ![nmos_circuit](images/nmos_circuit.png)
@@ -93,7 +93,7 @@ Include a well-labeled image of the LDO schematic designed in Cadence.
 
 ### Key Design Considerations  
 
-- Biasing of transistors tailored to the GPDK 45nm node.  
+- Biasing of transistors tailored to the HP 45nm node.  
 - Power efficiency and output voltage stability under varying loads.  
 - Compensation to ensure frequency stability.  
 
